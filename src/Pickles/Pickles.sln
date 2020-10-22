@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2041
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles", "Pickles\Pickles.csproj", "{38BAD6E0-78AB-4AC3-91A8-BF72AF5EE394}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -112,6 +112,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Markdown.AcceptanceTests", "Pickles.DocumentationBuilders.Markdown.AcceptanceTests\Pickles.DocumentationBuilders.Markdown.AcceptanceTests.csproj", "{81553C19-A9BB-4945-AE6A-A9616EAAA52C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Markdown", "Pickles.DocumentationBuilders.Markdown\Pickles.DocumentationBuilders.Markdown.csproj", "{732039F2-CAD8-44BC-9647-EC0ACAF59632}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MIL_pickles", "MIL_pickles", "{273958F1-B7B6-4DCB-95C0-722E941C9C52}"
+	ProjectSection(SolutionItems) = preProject
+		MIL_pickles\mil_test_scripts.cmd = MIL_pickles\mil_test_scripts.cmd
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
