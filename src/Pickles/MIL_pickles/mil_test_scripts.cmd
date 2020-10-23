@@ -1,17 +1,34 @@
 
 SET BIN_DIR=..\Pickles.CommandLine\bin\Release\
-SET PROJ_NAME=AN150_Test_Script
+SET PROJ_NAME=AN150_TestScript
 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="Analysis;Labelling;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Admin.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="Admin;Labelling;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Analysis.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="Admin;Analysis;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Labelling.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="Admin;Analysis;Labelling;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Performance.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="Admin;Analysis;Labelling;Performance"
-rename  .\Output\features.xlsx %PROJ_NAME%_Security.xlsx 
+REM generate list without exclusions to validate that all tests have been included
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel
+rename  .\Output\features.xlsx %PROJ_NAME%_All.xlsx 
+
+
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="UR;Analysis;Labelling;Performance;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Admin_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="UR;Admin;Labelling;Performance;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Analysis_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="UR;Admin;Analysis;Performance;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Labelling_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="UR;Admin;Analysis;Labelling;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Performance_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="UR;Admin;Analysis;Labelling;Performance"
+rename  .\Output\features.xlsx %PROJ_NAME%_Security_System_FR_NFR.xlsx 
+
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="FR;NFR;Analysis;Labelling;Performance;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Admin_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="FR;NFR;Admin;Labelling;Performance;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Analysis_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="FR;NFR;Admin;Analysis;Performance;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Labelling_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="FR;NFR;Admin;Analysis;Labelling;Security"
+rename  .\Output\features.xlsx %PROJ_NAME%_Performance_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="FR;NFR;Admin;Analysis;Labelling;Performance"
+rename  .\Output\features.xlsx %PROJ_NAME%_Security_Validation_UR.xlsx 
+
 
 
 REM %BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.5 --df=Excel --et="Admin;Analysis;Labelling;Performance;Security"
