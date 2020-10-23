@@ -41,7 +41,18 @@ namespace PicklesDoc.Pickles
 
         private bool IsExcludedTag(string tag)
         {
-            return tag.Equals($"@{this.excludeTags}", StringComparison.InvariantCultureIgnoreCase);
+            if (this.excludeTags != null)
+            {
+                // split the exclude tags string into mutiple tags
+                var tagsToExclude = this.excludeTags.Split(';');
+                if (tagsToExclude != null && tagsToExclude.Any(t => tag.Equals($"@{t}", StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    return true;
+                }
+            }
+            return false;
+
+            //return tag.Equals($"@{this.excludeTags}", StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }
