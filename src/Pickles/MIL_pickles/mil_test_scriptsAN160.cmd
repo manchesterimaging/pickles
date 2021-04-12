@@ -6,28 +6,62 @@ REM generate list without exclusions to validate that all tests have been includ
 %BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel
 rename  .\Output\features.xlsx %PROJ_NAME%_All.xlsx 
 
+REM This is a list of all the current labels
+REM Admin;Analysis;Integration;Labelling;Performance;Security;WebOnly
+REM DesktopOnly;WebOnly
 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Analysis;Labelling;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Admin_System_FR_NFR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Labelling;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Analysis_System_FR_NFR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Labelling_System_FR_NFR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Labelling;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Performance_System_FR_NFR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Labelling;Performance"
-rename  .\Output\features.xlsx %PROJ_NAME%_Security_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Analysis;Integration;Labelling;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Admin_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Integration;Labelling;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Analysis_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Labelling;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Integration_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Integration;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Labelling_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Integration;Labelling;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Performance_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Integration;Labelling;Performance;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Security_System_FR_NFR.xlsx 
 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Analysis;Labelling;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Admin_Validation_UR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Labelling;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Analysis_Validation_UR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Performance;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Labelling_Validation_UR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Labelling;Security"
-rename  .\Output\features.xlsx %PROJ_NAME%_Performance_Validation_UR.xlsx 
-%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Labelling;Performance"
-rename  .\Output\features.xlsx %PROJ_NAME%_Security_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Analysis;Integration;Labelling;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Admin_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Integration;Labelling;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Analysis_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Labelling;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Integration_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Integration;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Labelling_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Integration;Labelling;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Performance_System_FR_NFR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Admin;Analysis;Integration;Labelling;Performance;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Security_System_FR_NFR.xlsx 
+
+
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Analysis;Integration;Labelling;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Admin_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Integration;Labelling;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Analysis_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Labelling;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Integration_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Integration;Performance;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Labelling_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Integration;Labelling;Security;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Performance_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Integration;Labelling;Performance;WebOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Desktop_Security_Validation_UR.xlsx 
+
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Analysis;Integration;Labelling;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Admin_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Integration;Labelling;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Analysis_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Labelling;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Integration_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Integration;Performance;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Labelling_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Integration;Labelling;Security;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Performance_Validation_UR.xlsx 
+%BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="FR;NFR;Admin;Analysis;Integration;Labelling;Performance;DesktopOnly"
+rename  .\Output\features.xlsx %PROJ_NAME%_Web_Security_Validation_UR.xlsx 
 
 
 
