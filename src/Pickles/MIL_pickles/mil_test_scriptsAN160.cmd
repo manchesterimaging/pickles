@@ -7,7 +7,7 @@ REM generate list without exclusions to validate that all tests have been includ
 rename  .\Output\features.xlsx %PROJ_NAME%_All.xlsx 
 
 REM This is a list of all the current labels
-REM Admin;Analysis;Integration;Labelling;Performance;Security;WebOnly
+REM Admin;Analysis;Integration;Labelling;Performance;Security
 REM DesktopOnly;WebOnly
 
 %BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Excel --et="UR;Analysis;Integration;Labelling;Performance;Security;WebOnly"
