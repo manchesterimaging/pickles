@@ -2,7 +2,7 @@
 SET BIN_DIR=..\Pickles.CommandLine\bin\Release\
 SET PROJ_NAME=AN160_Requirements
 
-REM generate list without exclusions to validate that all tests have been included
+REM generate list without exclusions to validate that all requirements have been included
 %BIN_DIR%\Pickles.exe -f=C:\MIL_Src\docs\requirements\ -o=.\Output --sn=AssistDent --sv=1.6 --df=Word
 rename  .\Output\AssistDent.docx %PROJ_NAME%_AllRequirements.docx
 
